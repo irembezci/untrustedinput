@@ -1,0 +1,67 @@
+- title: AI Security Foundations
+  topics:
+    - AI Security Overview
+    - AI System Components
+    - Security Boundaries
+    - Threat Modeling for AI
+    - Risk Assessment
+- title: AI & Machine Learning Fundamentals
+  topics:
+    - Machine Learning
+    - Neural Networks
+    - Large Language Models
+    - Tokens & Context Windows
+    - Multimodal AI
+- title: Prompt Security
+  topics:
+    - title: Prompt Injection
+      url: /prompt-injection/
+    - Direct Prompt Injection
+    - Indirect Prompt Injection
+    - Instruction Hierarchy
+    - Jailbreaks
+    - System Prompt Disclosure
+    - Evasion & Obfuscation
+- title: Data Security & Privacy
+  topics:
+    - Sensitive Data Exposure
+    - Training Data Extraction
+    - Memorization & Data Leakage
+    - Personal Data & Privacy
+    - Data Poisoning
+- title: RAG & Knowledge Systems
+  topics:
+    - Retrieval-Augmented Generation (RAG)
+    - Vector Databases
+    - Retrieval Attacks
+    - Indirect Prompt Injection in RAG
+    - Knowledge Base Security
+- title: AI Agents & Tool Security
+  topics:
+    - Agentic AI
+    - Tool Calling
+    - Excessive Agency
+    - Permission Boundaries
+    - Memory & State
+    - Multi-Agent Systems
+- title: Model Attacks
+  topics:
+    - Adversarial Inputs
+    - Model Denial of Service
+    - Model Extraction
+    - Inference Attacks
+    - Supply Chain Risks
+- title: AI Security Testing
+  topics:
+    - AI Red Teaming
+    - Safety & Security Evaluations
+    - Guardrails
+    - Monitoring & Incident Response
+    - Responsible Disclosure
+    - AI Bug Bounty
+- title: Governance & Deployment
+  topics:
+    - Secure AI Lifecycle
+    - Policies & Standards
+    - Third-Party AI Risk
+    - Deployment Security
