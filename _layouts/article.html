@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="reading-shell" id="top">
+  <aside class="topic-sidebar" id="topic-sidebar">
+    <div class="sidebar-top"><button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-tree" aria-label="Collapse topic menu"><span class="toggle-icon">‹</span></button></div>
+    <div class="topic-tree" id="topic-tree">
+      {% assign recent_posts = site.posts | where_exp: "post", "post.language != 'tr'" | slice: 0, 4 %}
+      <section class="recent-publications"><h2>Latest publications</h2>{% for post in recent_posts %}<a class="recent-link {% if page.url == post.url %}current{% endif %}" href="{{ post.url | relative_url }}"><span>{{ post.title }}</span><time>{{ post.date | date: '%b %-d' }}</time></a>{% endfor %}</section>
+      <div class="library-label">AI SECURITY</div>
+      <details class="topic-group security-root" open><summary>AI Security</summary><div class="security-categories">
+        {% for group in site.data.navigation %}<details class="topic-group" open><summary>{{ group.title }}</summary><div class="topic-children">{% for topic in group.topics %}{% if topic.url %}<a class="topic-link {% if page.url == topic.url %}current{% endif %}" href="{{ topic.url | relative_url }}">{{ topic.title }}</a>{% else %}<span class="topic-link">{% if topic.title %}{{ topic.title }}{% else %}{{ topic }}{% endif %}</span>{% endif %}{% endfor %}</div></details>{% endfor %}
+      </div></details>
+    </div>
+  </aside>
+  <main class="article-wrap"><div class="article-kicker"><a href="{{ '/' | relative_url }}">{{ site.title }}</a><span>/</span><span>{{ page.category | default: 'Notes' }}</span></div><div class="article-byline">{{ page.date | date: '%-d %B %Y' }}{% if page.author %}<span>·</span>{{ page.author }}{% endif %}<span>·</span>{{ page.type | default: 'Article' }}</div><article class="prose"><h1>{{ page.title }}</h1>{% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}{{ content }}</article>{% if page.tags %}<div class="article-tags">{% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}</div>{% endif %}<a class="back-link" href="{{ '/' | relative_url }}">← Back to all articles</a></main>
+</div>
+<script>
+(() => { const sidebar=document.querySelector('#topic-sidebar'); const toggle=document.querySelector('#sidebar-toggle'); toggle?.addEventListener('click',()=>{const collapsed=sidebar.classList.toggle('is-collapsed');document.querySelector('.reading-shell').classList.toggle('sidebar-collapsed',collapsed);toggle.setAttribute('aria-expanded',String(!collapsed));toggle.setAttribute('aria-label',collapsed?'Expand topic menu':'Collapse topic menu')}); })();
+</script>
