@@ -1,6 +1,7 @@
 title: Untrusted Input
 description: Notes, news, findings and reviews on AI Security and AI Red Teaming.
 lang: en
+baseurl: "/untrustedinput"
 markdown: kramdown
 permalink: /:categories/:title/
 exclude: [README.md, Gemfile, Gemfile.lock]

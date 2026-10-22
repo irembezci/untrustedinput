@@ -8,7 +8,7 @@ A personal blog about AI Security, AI Red Teaming, and AI bug bounty research. T
 - Topic categories and article types filter the article list.
 - Article pages have a collapsible AI Security topic tree on the left.
 - The article sidebar starts with the four latest English publications. Each title links directly to its article and updates automatically from `_posts/`.
-- Below recent publications, the `AI Red Teaming` label heads the `AI Security` category tree.
+- Below recent publications, the collapsible `AI Security` topic tree appears alongside a same-sized `Web Security` section linking to the Web Security Academy.
 - `_data/navigation.yml` defines the topic tree. Add a top-level category as a new `title`, and add subtopics under its `topics` list. Add a `url` when a topic should link to a published article.
 - Turkish newsletter posts appear separately at `/newsletter/` and are excluded from the English home page.
 
